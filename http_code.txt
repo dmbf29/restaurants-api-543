@@ -1,0 +1,17 @@
+# Everything was Good
+200 => OK
+201 => Create
+204 => No content
+
+# Redirects
+301 => Permanent
+302 => Temp
+
+# User Error
+401 => Unauthorized (not logged in)
+403 => Forbidden (not allowed to)
+404 => Not found
+422 => Unprocessable Entity (Validation Errors)
+
+# Developer Error
+500 => Server Error
