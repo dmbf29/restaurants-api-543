@@ -12,10 +12,20 @@ class RestaurantPolicy < ApplicationPolicy
   def update?
     # current_user => user
     # @restaurant => record
-    user == record.user
+    owner?
   end
 
   def create?
     true
+  end
+
+  def destroy?
+    owner?
+  end
+
+  private
+
+  def owner?
+    user == record.user
   end
 end
